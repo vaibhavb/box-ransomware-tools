@@ -26,7 +26,7 @@ optional arguments:
 
 - box-ransomeware-recovery.py
 ```sh
-vaibhavb@Vaibhavs-MacBook-Pro box % python3 box-ransomeware-recovery.py -h
+% python3 box-ransomeware-recovery.py -h
 usage: box-ransomeware-recovery.py [-h] [-t] [-d FOLDER_ID [FOLDER_ID ...]]
                                    [-r RANSOMEWARE_EXT]
 
@@ -43,7 +43,7 @@ optional arguments:
 
 - box-rename-file.py
 ```sh
-vaibhavb@Vaibhavs-MacBook-Pro box % python3 box-rename-file.py -h         
+% python3 box-rename-file.py -h         
 usage: box-rename-file.py [-h] [-t] -f FILE_ID -r RENAME
 
 Get details on files in folders hit with ransomeware.
