@@ -25,7 +25,7 @@ def cleanup():
             
 def main(argv):
     global oauth, client, file_id, file_new_name
-    parser = argparse.ArgumentParser(description='Get details on files in folders hit with ransomeware.')
+    parser = argparse.ArgumentParser(description='rename a specific file-id to a desired name, as box does not allow clean UI re-naming.')
     parser.add_argument('-t', '--test', action='store_true', help="tests the oauth connection to Box servers")
     parser.add_argument('-f', "--file-id", required=True, help='file id to rename')
     parser.add_argument('-r', "--rename", required=True, help='file name to rename to')

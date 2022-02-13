@@ -55,10 +55,10 @@ optional arguments:
 
 - box-rename-file.py
 ```sh
-% python3 box-rename-file.py -h         
+% python3 box-rename-file.py -h
 usage: box-rename-file.py [-h] [-t] -f FILE_ID -r RENAME
 
-Get details on files in folders hit with ransomeware.
+rename a specific file-id to a desired name, as box does not allow clean UI re-naming.
 
 optional arguments:
   -h, --help            show this help message and exit
