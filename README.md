@@ -1,11 +1,23 @@
 These set of tools help you with recovering ransomeware effects files from Box. 
-These tools implement suggestions from [Box article](https://support.box.com/hc/en-us/articles/360043694054-Ransomware)
+These tools implement suggestions from [this Box article](https://support.box.com/hc/en-us/articles/360043694054-Ransomware)
 
 
 Pre-requisites
+Python >= 3.8
 1. Install Box python SDK
-2. Create a Box OAuth application
-
+```sh
+% pip3 install -r requirements.txt
+```
+2. Create a Box OAuth application, as described [here](https://developer.box.com/guides/authentication/oauth2/oauth2-setup/)
+3. create env.sh file with following info
+```
+export BOX_CLIENT_ID='XXXXX Fill from above step XXX'
+export BOX_CLIENT_SECRET='XXXXX Fill from above step XXX'
+```
+4. run env.sh in local shell
+```
+% source env.sh
+```
 
 Tools
 - box-get-enc-files.py
