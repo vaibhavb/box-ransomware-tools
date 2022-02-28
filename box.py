@@ -6,8 +6,8 @@ def do_Box_OAuth():
     # Dev token is available for 60 mins only, dont use it
     # This script will take hours to run on 500k files, best option is 3-legged OAuth
     OAUTH_KEYS = {
-        'BOX_CLIENT_ID':'jzw6abssrlhciah0zaieixlt7ycjaz7b',
-        'BOX_CLIENT_SECRET':'Pf13O5cnXLyBGD5G9e8ykwWXtOs3YRYp'
+        'BOX_CLIENT_ID':'',
+        'BOX_CLIENT_SECRET':''
     }
     for key in OAUTH_KEYS.keys():
         if key is None:
