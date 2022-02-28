@@ -1,4 +1,4 @@
-These set of tools help you with recovering ransomeware effects files from Box. 
+These set of tools help you with recovering ransomware effects files from Box. 
 These tools implement suggestions from [this Box article](https://support.box.com/hc/en-us/articles/360043694054-Ransomware)
 
 
@@ -23,7 +23,7 @@ Tools
 - box-get-enc-files.py
 ```sh
 % python3 box-get-enc-files.py -h
-usage: box-get-enc-files.py [-h] [-t] [-d FOLDER_ID [FOLDER_ID ...]] [-r RANSOMEWARE_EXT]
+usage: box-get-enc-files.py [-h] [-t] [-d FOLDER_ID [FOLDER_ID ...]] [-r RANSOMWARE_EXT]
 
 Get details on files in folders hit with ransomeware.
 
@@ -32,15 +32,15 @@ optional arguments:
   -t, --test            tests the oauth connection to Box servers
   -d FOLDER_ID [FOLDER_ID ...], --folder_id FOLDER_ID [FOLDER_ID ...]
                         folder ID(s) to work on
-  -r RANSOMEWARE_EXT, --ransomeware_ext RANSOMEWARE_EXT
-                        ransomeware file extension, default is deadbolt
+  -r RANSOMWARE_EXT, --ransomware_ext RANSOMWARE_EXT
+                        ransomware file extension, default is deadbolt
 ```
 
 - box-ransomeware-recovery.py
 ```sh
-% python3 box-ransomeware-recovery.py -h
+% python3 box-ransomware-recovery.py -h
 usage: box-ransomeware-recovery.py [-h] [-t] [-d FOLDER_ID [FOLDER_ID ...]]
-                                   [-r RANSOMEWARE_EXT]
+                                   [-r RANSOMWARE_EXT]
 
 recover files in folders hit with ransomeware.
 
@@ -49,8 +49,8 @@ optional arguments:
   -t, --test            tests the oauth connection to Box servers
   -d FOLDER_ID [FOLDER_ID ...], --folder_id FOLDER_ID [FOLDER_ID ...]
                         folder ID(s) to work on
-  -r RANSOMEWARE_EXT, --ransomeware_ext RANSOMEWARE_EXT
-                        ransomeware file extension, default is deadbolt
+  -r RANSOMWARE_EXT, --ransomware_ext RANSOMWARE_EXT
+                        ransomware file extension, default is deadbolt
 ```
 
 - box-rename-file.py
