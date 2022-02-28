@@ -25,7 +25,7 @@ Tools
 % python3 box-get-enc-files.py -h
 usage: box-get-enc-files.py [-h] [-t] [-d FOLDER_ID [FOLDER_ID ...]] [-r RANSOMWARE_EXT]
 
-Get details on files in folders hit with ransomeware.
+Get details on files in folders hit with ransomware.
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -42,7 +42,7 @@ optional arguments:
 usage: box-ransomeware-recovery.py [-h] [-t] [-d FOLDER_ID [FOLDER_ID ...]]
                                    [-r RANSOMWARE_EXT]
 
-recover files in folders hit with ransomeware.
+recover files in folders hit with ransomware.
 
 optional arguments:
   -h, --help            show this help message and exit
