@@ -9,7 +9,7 @@ from boxsdk.exception import BoxAPIException
 FILE_LIST_PATH = 'filelist.pkl'
 FILE_NAME_PATH= 'filenames.pkl'
 PROCESSED_FILE_PATH = 'processedfiles.pkl'
-RANSOMEWARE_KEY= '.deadbolt'
+RANSOMWARE_KEY= '.deadbolt'
 # get folders
 # 126264334150, 115714809494, 116874274727,107948712218,107946739327,135025921277, 109911126297, 118344302378
 folder_ids =[135025921277, 109911126297, 118344302378]
@@ -33,7 +33,7 @@ def file_setup():
                     folder_ids.append(item.id)
                 else:
                     # work only on the ransomeware infected files
-                    if (item.name.endswith(RANSOMEWARE_KEY)):
+                    if (item.name.endswith(RANSOMWARE_KEY)):
                         file_names[item.id]=item.name
                         file_ids.append(item.id)
         with open(FILE_LIST_PATH,'wb') as f:
@@ -60,13 +60,13 @@ def recover():
         for file_id in file_ids:
             file_name = file_names[file_id]
             #file_info = client.file(file_id).get()
-            # work only on the ransomeware infected files
-            if (file_name.endswith(RANSOMEWARE_KEY)):
+            # work only on the ransomware infected files
+            if (file_name.endswith(RANSOMWARE_KEY)):
                 #print (f'Working on File: {file_name}')
                 file_versions = client.file(file_id).get_previous_versions()
                 version = next((x for x in file_versions), None)
                 if (version != None):
-                    new_file_name = file_name.replace(RANSOMEWARE_KEY,'')
+                    new_file_name = file_name.replace(RANSOMWARE_KEY,'')
                     version_to_promote = client.file_version(version.id)
                     new_version = client.file(file_id).promote_version(version_to_promote)
                     try:
@@ -92,11 +92,11 @@ def cleanup():
             os.remove(PROCESSED_FILE_PATH)
         
 def main(argv):
-    global oauth, client, folder_ids, RANSOMEWARE_KEY
-    parser = argparse.ArgumentParser(description='recover files in folders hit with ransomeware.')
+    global oauth, client, folder_ids, RANSOMWARE_KEY
+    parser = argparse.ArgumentParser(description='recover files in folders hit with ransomware.')
     parser.add_argument('-t', '--test', action='store_true', help="tests the oauth connection to Box servers")
     parser.add_argument("-d", "--folder_id", action='extend', nargs='+', help="folder ID(s) to work on")
-    parser.add_argument("-r", "--ransomeware_ext", action='store', help="ransomeware file extension, default is deadbolt")
+    parser.add_argument("-r", "--ransomware_ext", action='store', help="ransomware file extension, default is deadbolt")
     args = parser.parse_args()
     if (args.test):
         oauth = do_Box_OAuth()
@@ -106,9 +106,9 @@ def main(argv):
         sys.exit()
     if (args.folder_id):
         folder_ids = args.folder_id
-    if (args.ransomeware_ext):
-        RANSOMEWARE_KEY = "." + args.ransomeware_ext
-    print(f'{RANSOMEWARE_KEY}')
+    if (args.ransomware_ext):
+        RANSOMWARE_KEY = "." + args.ransomware_ext
+    print(f'{RANSOMWARE_KEY}')
     oauth = do_Box_OAuth()
     client = Client(oauth)
     file_setup()
