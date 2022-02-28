@@ -33,7 +33,7 @@ def cleanup():
 
 def main(argv):
     global oauth, client, folder_ids, RANSOMWARE_KEY
-    parser = argparse.ArgumentParser(description='Get details on files in folders hit with ransomeware.')
+    parser = argparse.ArgumentParser(description='Get details on files in folders hit with ransomware.')
     parser.add_argument('-t', '--test', action='store_true', help="tests the oauth connection to Box servers")
     parser.add_argument("-d", "--folder_id", action='extend', nargs='+', help="folder ID(s) to work on")
     parser.add_argument("-r", "--ransomware_ext", action='store', help="ransomware file extension, default is deadbolt")
